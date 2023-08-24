@@ -3,20 +3,28 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Upload</title>
+    <title>Index</title>
   </head>
   <body>
-    {{ if .image }}
+    <h1>INDEX</h1>
+    <table>
+      <tr>
+        <td>No</td>
+        <td>Image</td>
+      </tr>
+      {{ if .image }} {{ for _, .image := range .image }}
+      <tr>
+        <td>1</td>
+        <td>
+          <img src="{{ .image }}" />
+        </td>
+      </tr>
+      {{ endfor }} {{ end }}
+    </table>
+
+    <!-- {{ if .image }}
     <img src="{{ .image }}" />
-    {{ end }}
-    <form action="/upload" method="POST" enctype="multipart/form-data">
-      <input type="file" name="image" />
-      <input type="submit" />
-      {{ if .message }}
-      <p>{{ .message }}</p>
-      <p>{{ .LocalName }}aa</p>
-      {{ end }}
-    </form>
+    {{ end }} -->
     <!-- <h1>Hello, world!</h1> -->
   </body>
 </html>

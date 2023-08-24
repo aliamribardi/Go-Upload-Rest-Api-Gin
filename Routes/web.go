@@ -17,6 +17,10 @@ func Route() {
 		c.HTML(http.StatusOK, "index.html", gin.H{})
 	})
 
+	Route.GET("/upload", func(c *gin.Context) {
+		c.HTML(http.StatusOK, "upload.html", gin.H{})
+	})
+
 	Route.POST("/upload", Controllers.Upload)
 
 	Route.Run()
