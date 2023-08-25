@@ -9,6 +9,9 @@ import (
 func main() {
 	Database.ConnectionDatabase()
 	Migrations.Migration()
-	Routes.Route()
-	Routes.RouteApi()
+
+	// Replace if want to use api or web
+	// Routes.Route()		// web
+	Routes.RouteApi()		// api
+	// =================
 }

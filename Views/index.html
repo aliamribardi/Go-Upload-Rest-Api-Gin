@@ -12,14 +12,14 @@
         <td>No</td>
         <td>Image</td>
       </tr>
-      {{ if .image }} {{ for _, .image := range .image }}
+      {{ if .image }} for _, .image := range .image {
       <tr>
         <td>1</td>
         <td>
           <img src="{{ .image }}" />
         </td>
       </tr>
-      {{ endfor }} {{ end }}
+      } {{ end }}
     </table>
 
     <!-- {{ if .image }}

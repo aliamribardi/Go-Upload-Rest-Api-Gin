@@ -59,8 +59,6 @@ func Upload (c *gin.Context) {
 }
 
 func UploadApi (c *gin.Context) {
-	// var upload Models.Upload
-
 	// Get the File
 	name_file, err := c.FormFile("image")
 	file_name := "Assets/Upload/Image/" + name_file.Filename
